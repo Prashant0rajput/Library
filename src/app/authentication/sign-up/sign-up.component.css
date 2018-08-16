@@ -1,0 +1,11 @@
+.example-container{
+	margin-top: 1rem;
+	display: flex;
+	justify-content :space-around;
+	flex-direction : column;
+	height: 200px;
+}
+button{
+	background-color: #4B8996;
+	border-radius: 30px;
+}

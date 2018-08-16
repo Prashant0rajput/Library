@@ -1,0 +1,17 @@
+div{
+	display: flex;
+	flex-direction : row;
+	justify-content : space-between;
+	background-image: linear-gradient(to right, #fbfbfb, #ebedf0, #d9e0e6, #c6d3da, #b2c7cb);
+	height: 100vh;
+}
+button{
+	position: fixed;
+	left: 90vw;
+	height: 3rem;
+}
+
+mat-tab-group{
+	position: fixed;
+	width: 100%;
+}
