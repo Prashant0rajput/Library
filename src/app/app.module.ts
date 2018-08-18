@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserAccountComponent } from './home/user-account/user-account.component';
 import { BooksComponent } from './home/books/books.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { BooksComponent } from './home/books/books.component';
     BrowserModule,
      AngularFireModule.initializeApp(environment.firebase),
      AngularFireAuthModule,
+     Ng2SearchPipeModule,
+     MatExpansionModule,
      FormsModule,
      MatFormFieldModule,
      MatInputModule,

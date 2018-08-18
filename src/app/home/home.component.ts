@@ -17,7 +17,7 @@ books: any;
 
   constructor( public firebase: AngularFireAuth , public db: AngularFireDatabase , private router: Router ) {
 
-  	this.books = this.db.list('books').valueChanges().subscribe(value => console.log(value))
+  	this.db.list('books').valueChanges().subscribe(value => {this.books = value})
 
    }
 

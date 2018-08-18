@@ -1,0 +1,42 @@
+div{
+	display: flex;
+	flex-direction : row;
+	margin: 5rem;
+	justify-content : space-between;
+}
+mat-card{
+	width: 40%;
+	height: 30rem;
+	overflow: auto;
+	
+}
+ul{
+	
+
+}
+
+mat-panel-title{
+	width: 80%;
+	display: block;
+}
+
+li{
+	display: flex;
+	justify-content : space-between;
+}
+mat-form-field{
+	width: 100%;
+}
+
+hr{
+	border-color: rgba(0,0,0,.12);
+}
+
+ul {
+  list-style: none;
+}
+
+.writer{
+	font-size: .8rem;
+	color: rgba(0,0,0,.84);
+}

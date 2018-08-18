@@ -1,1 +1,61 @@
-{{book| json}}
+
+<div>
+<mat-card>
+<span>
+	NOTICES
+</span>
+
+<!-- <li *ngFor = "let notice of notices">{{notice}}</li> -->
+
+
+</mat-card>
+
+<mat-card>
+ <mat-form-field>
+    <input matInput [(ngModel)] = "bookSearch" placeholder="Search books">
+    
+  </mat-form-field>
+<ul *ngFor= "let book of book | filter : bookSearch">
+	
+
+	
+
+
+
+
+
+<mat-accordion>
+  
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <li>
+		<span>
+		{{book.title}}
+		<br><span class="writer">{{book.writer}}</span>
+		</span>
+		<span *ngIf="book.issuedTo == 0" style = "color : green">
+				Available
+		</span>	
+		<span *ngIf="book.issuedTo != 0" style = "color : red">
+				Issued
+		</span>	
+	</li>
+
+      </mat-panel-title>
+      <mat-panel-description>
+        
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <li *ngFor = " let review of book.reviews; let i = index"> {{review}}</li>
+  </mat-expansion-panel>
+</mat-accordion>
+
+    
+
+</ul>
+</mat-card>
+
+</div>

@@ -12,7 +12,7 @@ export class SignInComponent implements OnInit {
 
   constructor(public firebase : AngularFireAuth , private router: Router) { }
 
-   email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
   password: string;
   emails : string;
@@ -37,6 +37,8 @@ export class SignInComponent implements OnInit {
 }
 
   ngOnInit() {
+
+
   }
 
 }
