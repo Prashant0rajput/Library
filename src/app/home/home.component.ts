@@ -37,8 +37,8 @@ if (user != null) {
     // The user's ID, unique to the Firebase project. Do NOT use this value to
     // authenticate with your backend server, if you have one. Use
     // FirebaseUser.getIdToken() instead.
-    String uid = user.getUid;
-    console.log(uid);
+    //String uid = user.getUid;
+    //console.log(uid);
 }
   }
 

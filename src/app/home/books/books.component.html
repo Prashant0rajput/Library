@@ -39,7 +39,7 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <li *ngFor = " let review of book.reviews; let i = index"> {{review}}</li>
+    <li *ngFor = "let review of getArray(book.reviews); let i = index"> {{review.body}}</li>
   </mat-expansion-panel>
 </mat-accordion>
 

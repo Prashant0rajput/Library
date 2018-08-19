@@ -25,4 +25,15 @@ export class BooksComponent implements OnInit {
   ngOnInit() {
   }
 
+  getArray(object)
+   {
+      var arr = [];
+    for(var obj in object)
+    {
+      arr.push(object[obj]);
+    }
+
+    return arr;
+   }
+
 }
