@@ -1,6 +1,34 @@
-<mat-card >
+<!-- <mat-card >
 <ul *ngFor= "let book of books">
 	<li *ngIf="book.issuedTo == 18069">{{book.title}}<br>{{book.writer}} <hr></li>
 
+</ul>
+</mat-card>
+ -->
+<mat-card>
+
+<ul *ngFor= "let book of books">
+
+<mat-accordion *ngIf = "book.issuedTo == 18069">
+  
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <li >
+		<span>
+		{{book.title}}
+		<br><span class="writer">{{book.writer}}</span>
+		</span>
+		
+	</li>
+
+      </mat-panel-title>
+      <mat-panel-description>
+        
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+  </mat-expansion-panel>
+</mat-accordion>
 </ul>
 </mat-card>

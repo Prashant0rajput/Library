@@ -15,12 +15,12 @@ export class BooksComponent implements OnInit {
 	books : any;
   bookSearch : any;
   panelOpenState = false;
+  notices : any;
   constructor( public firebase: AngularFireAuth , public db: AngularFireDatabase , private router: Router ) {
 
   	this.books = this.db.list('books').valueChanges().subscribe(value =>{this.book = value ; console.log(this.book[0])})
-
+    this.db.list('notices').valueChanges().subscribe(val => {this.notices = val})
    }
-
 
   ngOnInit() {
   }

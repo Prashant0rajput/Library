@@ -25,6 +25,8 @@ import { UserAccountComponent } from './home/user-account/user-account.component
 import { BooksComponent } from './home/books/books.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { CreateBooksComponent } from './home/create-books/create-books.component';
+import { CreateUserComponent } from './home/create-user/create-user.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     SignUpComponent,
     HomeComponent,
     UserAccountComponent,
-    BooksComponent
+    BooksComponent,
+    CreateBooksComponent,
+    CreateUserComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

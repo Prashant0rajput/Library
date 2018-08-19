@@ -31,6 +31,8 @@ export class SignInComponent implements OnInit {
   console.log(error.user.email);
   if(error.message == undefined)
   {
+
+  localStorage.setItem('ID', this.firebase.auth.currentUser.uid);
  this.router.navigate(['home']);
 }
   });

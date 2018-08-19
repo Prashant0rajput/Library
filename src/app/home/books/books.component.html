@@ -1,27 +1,17 @@
 
 <div>
+
 <mat-card>
+
 <span>
-	NOTICES
+	<h1>BOOKS</h1>
 </span>
 
-<!-- <li *ngFor = "let notice of notices">{{notice}}</li> -->
-
-
-</mat-card>
-
-<mat-card>
  <mat-form-field>
     <input matInput [(ngModel)] = "bookSearch" placeholder="Search books">
     
   </mat-form-field>
 <ul *ngFor= "let book of book | filter : bookSearch">
-	
-
-	
-
-
-
 
 
 <mat-accordion>
@@ -45,7 +35,7 @@
 
       </mat-panel-title>
       <mat-panel-description>
-        
+        18069
       </mat-panel-description>
     </mat-expansion-panel-header>
 
@@ -56,6 +46,16 @@
     
 
 </ul>
+</mat-card>
+
+<mat-card>
+<span>
+	<h1>NOTICES</h1>
+</span>
+
+<li id="notice" *ngFor = "let notice of notices ; let i=index">{{i+1}}. {{notice.date | date}} ,   {{notice.body}}</li>
+
+
 </mat-card>
 
 </div>
