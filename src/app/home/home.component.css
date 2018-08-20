@@ -2,7 +2,7 @@ div{
 	display: flex;
 	flex-direction : row;
 	justify-content : space-between;
-	background-image: linear-gradient(to right, #fbfbfb, #ebedf0, #d9e0e6, #c6d3da, #b2c7cb);
+	background: #C3C9C8;
 	height: 100vh;
 }
 button{

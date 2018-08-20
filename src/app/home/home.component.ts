@@ -17,10 +17,13 @@ books: any;
 
   constructor( public firebase: AngularFireAuth , public db: AngularFireDatabase , private router: Router ) {
 
+
     if(localStorage.getItem('ID') == null)
     {
         this.router.navigate(['']);
     }
+
+
 
   	this.db.list('books').valueChanges().subscribe(value => {this.books = value})
 
@@ -42,8 +45,13 @@ if (user != null) {
     // The user's ID, unique to the Firebase project. Do NOT use this value to
     // authenticate with your backend server, if you have one. Use
     // FirebaseUser.getIdToken() instead.
+
     String uid = user.getUid;
     console.log(uid);
+
+    //String uid = user.getUid;
+    //console.log(uid);
+
 }
   }
 

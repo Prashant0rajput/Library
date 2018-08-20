@@ -23,6 +23,10 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserAccountComponent } from './home/user-account/user-account.component';
 import { BooksComponent } from './home/books/books.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { CreateBooksComponent } from './home/create-books/create-books.component';
+import { CreateUserComponent } from './home/create-user/create-user.component';
 
 
 @NgModule({
@@ -30,6 +34,8 @@ import { BooksComponent } from './home/books/books.component';
     BrowserModule,
      AngularFireModule.initializeApp(environment.firebase),
      AngularFireAuthModule,
+     Ng2SearchPipeModule,
+     MatExpansionModule,
      FormsModule,
      MatFormFieldModule,
      MatInputModule,
@@ -50,7 +56,9 @@ import { BooksComponent } from './home/books/books.component';
     SignUpComponent,
     HomeComponent,
     UserAccountComponent,
-    BooksComponent
+    BooksComponent,
+    CreateBooksComponent,
+    CreateUserComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

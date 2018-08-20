@@ -1,3 +1,45 @@
-<p>
-  user-account works!
-</p>
+<!-- <mat-card >
+<ul *ngFor= "let book of books">
+	<li *ngIf="book.issuedTo == 18069">{{book.title}}<br>{{book.writer}} <hr></li>
+
+</ul>
+</mat-card>
+ -->
+<mat-card>
+
+  <!-- {{books | json}} -->
+
+<ul *ngFor= "let book of books ; let j = index">
+
+<mat-accordion *ngIf = "book.issuedTo == 18069">
+  
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <li >
+		<span>
+		{{book.title}}
+		<br><span class="writer">{{book.writer}} </span>
+		</span>
+		
+	</li>
+
+      </mat-panel-title>
+      <mat-panel-description>
+        
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+  
+    <li *ngFor = "let review of getArray(book.reviews); let i = index"> {{review.body}}</li>
+
+    <mat-form-field>
+      <input matInput [(ngModel)] = "book[review]" placeholder="Review....">
+    </mat-form-field>
+    <button mat-button (click)= "makeReview(j , book[review])" >Submit</button>
+
+  </mat-expansion-panel>
+</mat-accordion>
+</ul>
+</mat-card>
