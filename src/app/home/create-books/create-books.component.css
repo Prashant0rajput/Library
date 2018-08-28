@@ -3,11 +3,40 @@ span#createBooks{
 	flex-direction:row;
 }
 
+mat-accordion{
+	width: 90%;
+}
+
 mat-form-field{
 	padding: 1rem;
 }
 
-div{
+.writer{
+	font-size: .8rem;
+	color: rgba(0,0,0,.84);
+}
+
+h4{
+	margin-bottom: 1rem;
+}
+
+/*div{
 	width: 50%;
 	background-color: #FFFFFF;
+}*/
+#books{
+	overflow: auto;
+	display: flex;
+	flex-direction : column;
+	height: 50vh;
+}
+
+mat-card{
+	background: #c3c9c8;
+	margin-bottom:1rem; 
+	display: flex;
+    flex-direction: column;
+}
+button{
+
 }

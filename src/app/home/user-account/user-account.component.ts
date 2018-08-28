@@ -62,7 +62,7 @@ review : string;
   ngOnInit() {
   console.log(this.firebase.auth['app']);
   console.log(this.firebase.auth);
-  console.log(this.firebase.auth.currentUser.uid);
+  //console.log(this.firebase.auth.currentUser.uid);
   console.log(localStorage.getItem('ID'));
   }
 

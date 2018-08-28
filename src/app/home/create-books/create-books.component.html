@@ -1,16 +1,59 @@
 
-<div>
-	<span id="createBooks">
-	 <mat-form-field>
+
+
+ <mat-accordion>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <h4>Create books</h4>
+    </mat-expansion-panel-header>
+
+   <span id="createBooks">
+   <mat-form-field>
       <input matInput [(ngModel)] = "titles" placeholder="Title">
     </mat-form-field>
 
     <mat-form-field>
       <input matInput [(ngModel)] = "author" placeholder="Author">
     </mat-form-field>
+    
+   <!--  <mat-form-field>
+      <input matInput [(ngModel)] = "bookID" placeholder="Book ID">
+    </mat-form-field> -->
+
     <button mat-button (click)="create()">Create</button>
     </span>
 
-  	
- </div>
+    <span> <ngx-kjua [text]="bookKey" ></ngx-kjua> {{this.bookKey}}</span>
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <h4>Delete Books</h4>
+    </mat-expansion-panel-header>
+
+
+    <span id="books">
+  <mat-form-field>
+    <input matInput [(ngModel)] = "bookSearch" placeholder="Search books">
+    
+  </mat-form-field>
+
+    <span  *ngFor="let book of books | filter: bookSearch ; let j=index">
+      <mat-card>
+    <h4>{{book.title}}</h4>
+    <br><span class="writer">{{book.writer}}</span>
+    
+    <button mat-button (click)="delete(j)">DELETE</button>
+    </mat-card>
+
+    </span>
+    </span>
+
+  </mat-expansion-panel>
+
+
+
+</mat-accordion>
 

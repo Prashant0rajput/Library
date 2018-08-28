@@ -18,45 +18,35 @@ books: any;
   constructor( public firebase: AngularFireAuth , public db: AngularFireDatabase , private router: Router ) {
 
 
-    if(localStorage.getItem('ID') == null)
-    {
-        this.router.navigate(['']);
-    }
-
-
-
+    
   	this.db.list('books').valueChanges().subscribe(value => {this.books = value})
 
    }
 
   ngOnInit() {
 
-      console.log(this.firebase.auth);
-     user = this.firebase.getInstance.getCurrentUser;
+    //  console.log(this.firebase.auth);
+     //user = this.firebase.getInstance.getCurrentUser;
+     if(localStorage.getItem('ID') == null)
+    {
+        this.router.navigate(['']);
+    }
+
+  }
 
 
-if (user != null) {
-    // Name, email address, and profile photo Url
-   
+  getID()
+  {
+  if(localStorage.getItem('ID') == 'AUnUOdzdZye1E1gAC7m78TCnLWJ2' || localStorage.getItem('ID') == 'YxlKFE1DqbV9T6LJU7mTmVDoaBP2'){
+  return true;
+  }
 
-    // Check if user's email is verified
-    
-
-    // The user's ID, unique to the Firebase project. Do NOT use this value to
-    // authenticate with your backend server, if you have one. Use
-    // FirebaseUser.getIdToken() instead.
-
-    String uid = user.getUid;
-    console.log(uid);
-
-    //String uid = user.getUid;
-    //console.log(uid);
-
-}
+  return false;
   }
 
   logout() {
     this.firebase.auth.signOut();
+    localStorage.removeItem('ID')
     this.router.navigate(['']);
   }
 

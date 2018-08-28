@@ -8,7 +8,7 @@ import { SignInComponent } from './authentication/sign-in/sign-in.component';
 const routes: Routes = [
   { path: '', component: AuthenticationComponent },
   { path : 'home' , component : HomeComponent},
-  { path : 'signIn' , component : SignInComponent},
+  { path : '**' , component : AuthenticationComponent},
 ];
 
 @NgModule({

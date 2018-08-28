@@ -35,10 +35,10 @@
 
       </mat-panel-title>
       <mat-panel-description>
-        18069
+        {{book.issuedTo}}
       </mat-panel-description>
     </mat-expansion-panel-header>
-
+    <span> <ngx-kjua [text]="bookKey" ></ngx-kjua></span>
     <li *ngFor = "let review of getArray(book.reviews); let i = index"> {{review.body}}</li>
   </mat-expansion-panel>
 </mat-accordion>

@@ -1,0 +1,50 @@
+.example-container{
+	 position:fixed;
+    top: 50%;
+    left: 50%;
+    width:40em;
+    height:30em;
+    margin-top: -12em; /*set to a negative number 1/2 of your height*/
+    margin-left: -20em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    overflow: hidden;
+    border-radius: 4px;
+    display: flex;
+    align-items : center;
+    justify-content: space-around;
+    flex-direction : column;
+   
+	
+}
+input{
+	color: black;
+}
+
+zxing-scanner{
+	width: 15rem;
+	height: 15rem;
+}
+/*/deep/ .small-video {
+    max-height: 30vh;
+    width: 30vw;
+    object-fit: contain;
+}*/
+
+
+.example-container div{
+	width: 100%;
+	display: flex;
+    align-items : center;
+    justify-content: space-around;
+
+}
+button{
+	background-color: #4B8996;
+	height: 4rem;
+	width: 10rem;
+	font-size: 1.5rem;
+	border-radius: 30px;
+}
+

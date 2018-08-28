@@ -11,7 +11,7 @@ import { MatInputModule ,
  MatCardModule,
   } from '@angular/material';
   import {MatButtonModule} from '@angular/material/button';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from "@angular/material/icon";
 import { AppComponent } from './app.component';
@@ -27,6 +27,13 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CreateBooksComponent } from './home/create-books/create-books.component';
 import { CreateUserComponent } from './home/create-user/create-user.component';
+import { BookManagerComponent } from './home/book-manager/book-manager.component';
+import { NoticeComponent } from './home/notice/notice.component';
+import { IssueBooksComponent } from './home/issue-books/issue-books.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { NgxKjuaModule } from 'ngx-kjua';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -36,6 +43,7 @@ import { CreateUserComponent } from './home/create-user/create-user.component';
      AngularFireAuthModule,
      Ng2SearchPipeModule,
      MatExpansionModule,
+     MatSnackBarModule,
      FormsModule,
      MatFormFieldModule,
      MatInputModule,
@@ -47,6 +55,10 @@ import { CreateUserComponent } from './home/create-user/create-user.component';
      AngularFireDatabaseModule,
      MatCardModule,
      MatButtonModule,
+     ZXingScannerModule,
+     NgxKjuaModule,
+     MatStepperModule,
+     MatChipsModule,
 
   ],
    declarations: [
@@ -58,7 +70,10 @@ import { CreateUserComponent } from './home/create-user/create-user.component';
     UserAccountComponent,
     BooksComponent,
     CreateBooksComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    BookManagerComponent,
+    NoticeComponent,
+    IssueBooksComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

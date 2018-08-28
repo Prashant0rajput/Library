@@ -3,8 +3,9 @@
 <mat-tab-group>
   <mat-tab label="My account"> <app-user-account></app-user-account> </mat-tab>
   <mat-tab label="Books"> <app-books></app-books> </mat-tab>
-  <mat-tab label="Manage Books"> <app-create-books></app-create-books> </mat-tab>
-   <mat-tab label="Manage Users"> <app-create-user></app-create-user> </mat-tab>
+  <mat-tab *ngIf="getID()" label="Manage Books"> <app-book-manager></app-book-manager> </mat-tab>
+  <mat-tab *ngIf="getID()" label="Manage Users"> <app-create-user></app-create-user> </mat-tab>
+   <mat-tab *ngIf="getID()" label="Send Notice"> <app-notice></app-notice> </mat-tab>
 </mat-tab-group>
 
 <button mat-button (click)="logout()">Logout</button>

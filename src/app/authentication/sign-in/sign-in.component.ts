@@ -3,6 +3,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase';
 import {FormControl, Validators} from '@angular/forms';
 import { Router, Routes } from '@angular/router';
+import {MatSnackBar} from '@angular/material';
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -10,7 +12,7 @@ import { Router, Routes } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(public firebase : AngularFireAuth , private router: Router) { }
+  constructor(public firebase : AngularFireAuth , private router: Router , public snackBar: MatSnackBar) { }
 
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
@@ -26,7 +28,7 @@ export class SignInComponent implements OnInit {
   	this.firebase.auth.signInWithEmailAndPassword(this.emails, this.password).then((error) => {
 
 
-  console.log( "test");
+  console.log( "error");
   //console.log(error.message);
   console.log(error.user.email);
   if(error.message == undefined)
@@ -35,6 +37,7 @@ export class SignInComponent implements OnInit {
   localStorage.setItem('ID', this.firebase.auth.currentUser.uid);
  this.router.navigate(['home']);
 }
+
   });
 }
 
