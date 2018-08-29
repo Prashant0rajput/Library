@@ -59,7 +59,6 @@ import {MatChipsModule} from '@angular/material/chips';
      NgxKjuaModule,
      MatStepperModule,
      MatChipsModule,
-
   ],
    declarations: [
     AppComponent,

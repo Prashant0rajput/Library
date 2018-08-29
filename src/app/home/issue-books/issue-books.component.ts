@@ -66,6 +66,8 @@ bookIssueArray =  [];
         console.log('Result: ', resultString);
         this.qrResultString = resultString;
         this.bookIssueArray.push(this.qrResultString);
+        this.studentID = this.bookIssueArray[0];
+        console.log(this.bookIssueArray);
     }
 
     onDeviceSelectChange(selectedValue: string) {
@@ -76,10 +78,10 @@ bookIssueArray =  [];
     issue()
     {
 
-    	for (var i = 0; i < this.bookIssueArray.length; i++) {
+    	for (var i = 1; i < this.bookIssueArray.length; i++) {
     		const itemsRef = this.db.list('books/'+ this.bookIssueArray[i]);
 
-    		itemsRef.set("issuedTo" : this.studentID);
+    		itemsRef.set("issuedTo" : this.studentID)
     		
     	};
     		
