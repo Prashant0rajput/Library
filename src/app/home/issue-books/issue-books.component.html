@@ -1,15 +1,20 @@
 
+
+
 <div class="example-container">
   <div>
+
+     <mat-form-field>
+    <input matInput [(ngModel)]="studentID" ng-value=studentID placeholder="Student ID" >
+   
+  </mat-form-field>
+
   <mat-form-field>
     <input matInput [(ngModel)] = qrResultString ng-value=qrResultString placeholder="Book ID" >
     
   </mat-form-field>
 
-   <mat-form-field>
-    <input matInput [(ngModel)]="studentID" placeholder="Student ID" >
-   
-  </mat-form-field>
+  
   </div>
 
   
@@ -27,13 +32,14 @@
 
 <button mat-button (click)="issue()"> ISSUE  </button>
 
- <span ></span>
+ <span id="chips" >
 
- <mat-chip-list *ngFor = " let issBook of bookIssueArray">
+ <mat-chip-list *ngFor = " let issBook of bookIssueArray ; let i = index">
  
-  <mat-chip color="primary" selected>{{issBook}}</mat-chip>
+  <mat-chip *ngIf="i>0">{{bookIssueArray[i]}}</mat-chip>
   
 </mat-chip-list>
+</span>
 
 </div>
 
