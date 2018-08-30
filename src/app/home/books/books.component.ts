@@ -16,6 +16,7 @@ export class BooksComponent implements OnInit {
   bookSearch : any;
   panelOpenState = false;
   notices : any;
+  currUserID : String;
   constructor( public firebase: AngularFireAuth , public db: AngularFireDatabase , private router: Router ) {
 
   	this.books = this.db.list('books').valueChanges().subscribe(value =>{this.book = value ; console.log(this.book[0])})
@@ -25,6 +26,8 @@ export class BooksComponent implements OnInit {
   ngOnInit() {
     
   }
+
+  
 
   getArray(object)
    {

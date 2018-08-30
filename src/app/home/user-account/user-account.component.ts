@@ -24,6 +24,9 @@ review : string;
 
     });
 
+     this.db.object('user/' + localStorage.getItem("ID")).valueChanges().subscribe(value =>{this.currUserID = value.rollNo ; console.log(value.rollNo) })
+
+
     this.db.list('books').valueChanges().subscribe(val => {this.books = val;
 
       var keys = Object.keys(val);
@@ -37,6 +40,9 @@ review : string;
 
 
    }
+
+  
+
 
    getArray(object)
    {
@@ -60,6 +66,7 @@ review : string;
    }
 
   ngOnInit() {
+   
   console.log(this.firebase.auth['app']);
   console.log(this.firebase.auth);
   //console.log(this.firebase.auth.currentUser.uid);
