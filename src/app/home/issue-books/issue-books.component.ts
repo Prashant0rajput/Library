@@ -82,8 +82,11 @@ bookIssueArray =  [];
     		const itemsRef = this.db.list('books/'+ this.bookIssueArray[i]);
 
     		itemsRef.set("issuedTo" : this.studentID)
+
     		
     	};
+        // this.bookIssueArray = [];
+        //     this.studentID = "";
     		
     }
 }
