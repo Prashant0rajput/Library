@@ -25,7 +25,7 @@ books: any;
 
   ngOnInit() {
 
-    //  console.log(this.firebase.auth);
+    // console.log(this.firebase.auth);
      //user = this.firebase.getInstance.getCurrentUser;
      if(localStorage.getItem('ID') == null)
     {

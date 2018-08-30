@@ -6,16 +6,3 @@
     display: none; 
 }
 
-@import '~@angular/material/theming';
-
-@include mat-core();
-
-
-@import 'theme.scss';
-
-
-.theme {
-  
- 
-  @include angular-material-theme($my-theme);
-}

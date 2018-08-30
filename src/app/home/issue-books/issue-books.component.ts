@@ -81,7 +81,7 @@ bookIssueArray =  [];
     	for (var i = 1; i < this.bookIssueArray.length; i++) {
     		const itemsRef = this.db.list('books/'+ this.bookIssueArray[i]);
 
-    		itemsRef.set("issuedTo" : this.studentID)
+    		itemsRef.set("issuedTo" : this.studentID);
 
     		
     	};

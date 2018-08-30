@@ -22,12 +22,19 @@ export class CreateUserComponent implements OnInit {
 
    create(){
   	console.log("create called");
-    const itemsRef = this.db.list('user');
-    itemsRef.push( { "name" :this.name , "email" : this.email , "password" : "password" , "rollNo" : this.rollNo});
-    alert("user created");
+    // const itemsRef = this.db.list('user');
+    // itemsRef.push( { "name" :this.name , "email" : this.email , "password" : "password" , "rollNo" : this.rollNo});
+
+    // alert("user created");
 
 
-   this.firebase.auth.createUserWithEmailAndPassword(this.email, "password").catch(function(error) {
+   this.firebase.auth.createUserWithEmailAndPassword(this.email, "password").then((user , this.db , this.name ,this.rollNo, this.email)=>{
+    const ref = this.db.object('user/' + user.user.uid);
+
+    ref.update({"name" :this.name , "email" : this.email , "password" : "password" , "rollNo" : this.rollNo});
+     console.log(user.user.uid);
+
+   }).catch(function(error) {
  
   var errorCode = error.code;
   var errorMessage = error.message;
